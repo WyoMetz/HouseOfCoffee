@@ -8,35 +8,51 @@ namespace TestInterface
         ConsoleView view = new ConsoleView();
         public void ShowMenu()
         {
+            view.GetOverallCosts();
+            view.GetOverallSales();
+            view.GetOverallProfit();
             Console.WriteLine("Main Menu \n" +
                 "Enter 'Coffee' to input Coffee sales \n" +
                 "Enter 'Sandwich' to input Sandwich sales \n" +
                 "Enter 'Payroll' to input Payroll hours \n" +
-                "Enter 'Profit' to view overall profit \n" +
                 "Or enter 'Exit' to Exit the program \n");
+            Console.Write("HouseOfCoffee> ");
             string input = validation.CheckString(Console.ReadLine());
             if (input.ToLower().Contains("coffee"))
             {
                 CoffeeInput();
             }
-            if (input.ToLower().Contains("sandwich"))
+            else if (input.ToLower().Contains("sandwich"))
             {
                 SandwichInput();
             }
-            if (input.ToLower().Contains("payroll"))
+            else if (input.ToLower().Contains("payroll"))
             {
                 EmployeePayroll();
             }
-            if (input.ToLower().Contains("profit"))
+            else if (input.ToLower().Contains("exit"))
             {
                 Console.Clear();
-                view.GetOverallCosts();
-                view.GetOverallSales();
-                view.GetOverallProfit();
+                Console.WriteLine("Did you want to exit? ( y / n )");
+                Console.Write("HouseOfCoffee> ");
+                string exit = validation.CheckString(Console.ReadLine());
+                if (exit.ToLower().Contains("y"))
+                {
+                    Console.WriteLine("Thanks For using the House Of Coffee App!");
+                    Console.ReadLine();
+                    Environment.Exit(Environment.ExitCode);
+                }
+                else
+                {
+                    Console.Clear();
+                    ShowMenu();
+                }
             }
-            Console.WriteLine("Thanks For using the Coffee House App!");
-            Console.ReadLine();
-            Environment.Exit(Environment.ExitCode);
+            else
+            {
+                Console.WriteLine("Sorry, didn't recognise the Command");
+                ShowMenu();
+            }
         }
 
         private void CoffeeInput()
@@ -71,6 +87,7 @@ namespace TestInterface
         {
             Console.Clear();
             view.EmployeePay();
+            Console.Clear();
             ShowMenu();
         }
     }

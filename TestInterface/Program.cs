@@ -11,7 +11,8 @@ namespace TestInterface
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to The Coffee House Program \n");
-            ConsoleMenu menu = new ConsoleMenu();
+            Console.WriteLine("Press any Key to begin");
+            Console.ReadLine();
             while (true)
             {
                 run();

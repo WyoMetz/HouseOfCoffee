@@ -9,6 +9,7 @@ namespace TestInterface
         double sandwichCost, sandwichSales, sandwichProfit;
         double coffeeCost, coffeeSales, coffeeProfit;
         double PayrollCost;
+        enum Employees { Bob, Janice, Micheal, Suzie, Alex }
 
         public void GetOverallCosts()
         {
@@ -70,9 +71,10 @@ namespace TestInterface
         public void EmployeePay()
         {
             Payroll payroll;
+
             for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine($"Number of hours worked by Employee {i + 1}");
+                Console.WriteLine($"Number of hours worked by Employee {(Employees)i}");
                 int hours = validation.CheckInt(Console.ReadLine());
                 PayrollCost += payroll.Cost(hours);
             }

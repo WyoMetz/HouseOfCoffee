@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TestInterface
 {
@@ -15,7 +11,7 @@ namespace TestInterface
                 int value = int.Parse(input);
                 if (value > 0)
                 {
-                return value;
+                    return value;
                 }
                 else
                 {

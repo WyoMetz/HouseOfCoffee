@@ -50,7 +50,8 @@ namespace TestInterface
             }
             else
             {
-                Console.WriteLine("Sorry, didn't recognise the Command");
+                Console.Clear();
+                Console.WriteLine("\n  Sorry, didn't recognise the Command! \n");
                 ShowMenu();
             }
         }

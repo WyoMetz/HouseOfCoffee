@@ -14,25 +14,25 @@ namespace TestInterface
         public void GetOverallCosts()
         {
             Console.WriteLine($"Your overall Costs are: \n" +
-                $"Sandwich Cost is {sandwichCost:c} \n" +
-                $"Coffee Cost is {coffeeCost:c} \n" +
-                $"Payroll Cost is {PayrollCost:c} \n");
+                $" Sandwich Cost is {sandwichCost:c} \n" +
+                $" Coffee Cost is {coffeeCost:c} \n" +
+                $" Payroll Cost is {PayrollCost:c} \n");
         }
 
         public void GetOverallSales()
         {
             Console.WriteLine($"Your overall sales totals are: \n" +
-                $"Sandwich sales {sandwichSales:c} \n" +
-                $"Coffee sales {coffeeSales:c} \n" +
-                $"Total Sales {sandwichSales + coffeeSales:c} \n");
+                $" Sandwich sales {sandwichSales:c} \n" +
+                $" Coffee sales {coffeeSales:c} \n" +
+                $" Total Sales {sandwichSales + coffeeSales:c} \n");
         }
 
         public void GetOverallProfit()
         {
             Console.WriteLine($"Your overall profit is: \n" +
-                $"Sandwich profit {sandwichProfit:c} \n" +
-                $"Coffee profit {coffeeProfit:c} \n" +
-                $"Overall Profit is {sandwichProfit + coffeeProfit - PayrollCost:c} \n");
+                $" Sandwich profit {sandwichProfit:c} \n" +
+                $" Coffee profit {coffeeProfit:c} \n" +
+                $" Overall Profit is {sandwichProfit + coffeeProfit - PayrollCost:c} \n");
         }
 
         public void GetSandwichSales()

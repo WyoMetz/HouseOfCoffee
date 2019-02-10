@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeLib", "CoffeeLib\Coff
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestInterface", "TestInterface\TestInterface.csproj", "{0D0E6C66-8256-43D0-AA61-8535ACFDB5DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseOfCoffee", "I:\MSSA\HouseOfCoffee-master\HouseOfCoffee\HouseOfCoffee.csproj", "{D989412F-AEC6-4FBD-968B-E14A748141D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseOfCoffee", "HouseOfCoffee\HouseOfCoffee.csproj", "{D989412F-AEC6-4FBD-968B-E14A748141D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

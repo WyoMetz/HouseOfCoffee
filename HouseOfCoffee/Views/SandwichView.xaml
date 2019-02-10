@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="HouseOfCoffee.Views.SandwichView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HouseOfCoffee.Views"
+			TextElement.Foreground='Wheat'
+			TextOptions.TextFormattingMode='Ideal'
+			mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300">
+
+    <Grid>
+				<Grid Background='SteelBlue' />
+				<Viewbox>
+						<Grid Margin='4'>
+								<Grid.ColumnDefinitions>
+										<ColumnDefinition />
+										<ColumnDefinition />
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+										<RowDefinition />
+										<RowDefinition />
+								</Grid.RowDefinitions>
+								<Image Source='/HouseOfCoffee;component/Assets/EggSandwich.jpg' MaxWidth='115' Margin='4' />
+								<Grid Grid.Column='1' Margin='4'>
+										<Grid.RowDefinitions>
+												<RowDefinition />
+												<RowDefinition />
+										</Grid.RowDefinitions>
+										<TextBlock Text='Egg Sandwich Sales' VerticalAlignment='Bottom'/>
+										<TextBox Text='{Binding EggSandwich, Mode=TwoWay}'
+														 Grid.Row='1'
+														 VerticalAlignment='Top' />
+								</Grid>
+								<Image Grid.Row='1'
+											 Source='/HouseOfCoffee;component/Assets/ChickenSandwich.jpg'
+											 MaxWidth='115' Margin='4' />
+								<Grid Grid.Column='1'
+											Grid.Row='1' Margin='4'>
+										<Grid.RowDefinitions>
+												<RowDefinition />
+												<RowDefinition />
+										</Grid.RowDefinitions>
+										<TextBlock Text='Chicken Sandwich Sales'
+															 VerticalAlignment='Bottom' />
+										<TextBox Text='{Binding ChickenSandwich, Mode=TwoWay}'
+														 Grid.Row='1' VerticalAlignment='Top'/>
+								</Grid>
+						</Grid>
+				</Viewbox>
+		</Grid>
+</UserControl>

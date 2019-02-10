@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="HouseOfCoffee.Views.CoffeeView"
+			xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			xmlns:local="clr-namespace:HouseOfCoffee.Views"
+			TextElement.Foreground='Wheat'
+			TextOptions.TextFormattingMode='Ideal'
+			mc:Ignorable="d"
+			d:DesignHeight="300"
+			d:DesignWidth="300"
+			>
+		<Grid>
+				<Grid Background='SteelBlue'/>
+				<Viewbox>
+						<Grid Margin='4'>
+								<Grid.ColumnDefinitions>
+										<ColumnDefinition />
+										<ColumnDefinition />
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+										<RowDefinition />
+										<RowDefinition />
+										<RowDefinition />
+								</Grid.RowDefinitions>
+								<Image  Source='/HouseOfCoffee;component/Assets/SmallCoffee.jpg'
+												MaxHeight='115'
+												MaxWidth='115' Margin='4'/>
+								<Grid Grid.Column='1' Margin='4'>
+										<Grid.RowDefinitions>
+												<RowDefinition />
+												<RowDefinition />
+										</Grid.RowDefinitions>
+										<TextBlock Text='Small Coffee Sales'
+															 VerticalAlignment='Bottom' />
+										<TextBox x:Name='SmallCoffee' Text='{Binding SmallCoffeeSales, Mode=TwoWay}'
+														 VerticalAlignment='Top'
+														 Grid.Row='1' />
+								</Grid>
+								<Image Source='/HouseOfCoffee;component/Assets/MediumCoffee.jpg'
+											 Grid.Row='1'
+											 MaxHeight='115'
+											 MaxWidth='115' Margin='4'/>
+								<Grid Grid.Column='1'
+											Grid.Row='1' Margin='4'>
+										<Grid.RowDefinitions>
+												<RowDefinition />
+												<RowDefinition />
+										</Grid.RowDefinitions>
+										<TextBlock Text='Medium Coffee Sales'
+															 VerticalAlignment='Bottom' />
+										<TextBox Text='{Binding MediumCoffeeSales, Mode=TwoWay}'
+														 VerticalAlignment='Top'
+														 Grid.Row='1' />
+								</Grid>
+								<Image Source='/HouseOfCoffee;component/Assets/LargeCoffee.jpg'
+											 MaxHeight='85'
+											 MaxWidth='115'
+											 Grid.Row='2' Margin='4'/>
+								<Grid Grid.Column='1'
+											Grid.Row='2' Margin='4'>
+										<Grid.RowDefinitions>
+												<RowDefinition />
+												<RowDefinition />
+										</Grid.RowDefinitions>
+										<TextBlock Text='Large Coffee Sales'
+															 VerticalAlignment='Bottom' />
+										<TextBox Text='{Binding LargeCoffeeSales, Mode=TwoWay}'
+														 VerticalAlignment='Top'
+														 Grid.Row='1' />
+								</Grid>
+						</Grid>
+				</Viewbox>
+		</Grid>
+</UserControl>
